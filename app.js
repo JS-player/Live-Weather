@@ -15,11 +15,11 @@ btn.addEventListener('click', getDate);
 async function getDate() {
   try {
     var Zipcode = document.querySelector('#zip').value;
-    var fullUrll = `http://api.openweathermap.org/data/2.5/weather?zip=${Zipcode}&appid=${apiKey}&units=metric`;
+    var fullUrll = `https://api.openweathermap.org/data/2.5/weather?zip=${Zipcode}&appid=${apiKey}&units=metric`;
     var city = `Zipcode: ${Zipcode}`;
     if (!Zipcode) {
       var city = document.getElementById('citySel').value;
-      var fullUrll = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+      var fullUrll = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     }
     document.getElementById('loc').innerHTML = `${city}`;
     const response = await fetch(fullUrll)

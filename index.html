@@ -13,41 +13,44 @@
     <div class="holder headline">
       Weather Journal App
     </div>
-    <div class="holder zip">
-      <label for="zip">Enter Zipcode here [USA]</label>
-      <input type="text" id="zip" placeholder="Enter zip code here">
-    </div>
-    <div class="city">
-      <label for="citySel">OR| Select City [EG]</label>
-      <select name="city" id="citySel" size="1">
-        <!-- <option value="Cairo" selected="selected">Select City</option> -->
-        <option selected value="Cairo">Cairo</option>
-        <option value="Alexandria">Alexandria</option>
-        <option value="Giza">Giza</option>
-        <option value="Faiyum">Faiyum</option>
-        <option value="aswan">Aswan</option>
-        <option value="Luxor">Luxor</option>
-        <option value="Ismailia">Ismailia</option>
-        <option value="Suez">Suez</option>
-        <option value="Qena">Qena</option>
-        <option value="Minya">Minya</option>
-        <option value="Matruh">Matruh</option>
-        <option value="red+sea">Red Sea</option>
-        <option value="Gharbia">Gharbia</option>
-        <option value="Damietta">Damietta</option>
-        <option value="Beni+Suef">Beni Suef</option>
-        <option value="Beheira">Beheira</option>
-        <option value="Asyut">Asyut</option>
-        <option value="Monufia">Monufia</option>
-        <option value="Port+Said">Port Said</option>
+    <div class="selector">
+      <div class="holder zip">
+        <label for="zip">Enter Zipcode here [USA]</label>
+        <input type="text" id="zip" placeholder="Enter zip code here">
+      </div>
+      <div class="citySel">
+        <label for="citySel">OR| Select City [EG]</label>
+        <select name="city" id="citySel" size="1">
+          <option selected value="Cairo">Cairo</option>
+          <option value="Alexandria">Alexandria</option>
+          <option value="Giza">Giza</option>
+          <option value="Faiyum">Faiyum</option>
+          <option value="aswan">Aswan</option>
+          <option value="Luxor">Luxor</option>
+          <option value="Ismailia">Ismailia</option>
+          <option value="Suez">Suez</option>
+          <option value="Qena">Qena</option>
+          <option value="Minya">Minya</option>
+          <option value="Matruh">Matruh</option>
+          <option value="red+sea">Red Sea</option>
+          <option value="Gharbia">Gharbia</option>
+          <option value="Damietta">Damietta</option>
+          <option value="Beni+Suef">Beni Suef</option>
+          <option value="Beheira">Beheira</option>
+          <option value="Asyut">Asyut</option>
+          <option value="Monufia">Monufia</option>
+          <option value="Port+Said">Port Said</option>
 
-      </select>
+        </select>
+      </div>
     </div>
+
+
     <div class="holder feel">
       <button id="generate" type="submit"> Get Weather </button>
     </div>
 
-    <div class="widget">
+    <div id="show" class=" widget">
 
       <div class="left-panel panel">
         <div id='date' class="date">
@@ -60,9 +63,11 @@
       <div class="right-panel panel">
         <img src="images/p1.png" alt="" width="160">
       </div>
-
     </div>
-    <script src="app.js" type="text/javascript"></script>
+    <footer>&#169; Copyright M. Abdelrahman </footer>
+  </div>
+
+  <script src="app.js" type="text/javascript"></script>
 
 </body>
 

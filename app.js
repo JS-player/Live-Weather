@@ -18,7 +18,7 @@ async function getDate() {
     var fullUrll = `https://api.openweathermap.org/data/2.5/weather?zip=${Zipcode}&appid=${apiKey}&units=metric`;
     var city = `Zipcode: ${Zipcode}`;
     if (!Zipcode) {
-      var Cnum = document.getElementsByTagName('select')[0].selectedIndex;      
+      var Cnum = document.getElementsByTagName('select')[0].selectedIndex;
       var city = document.getElementsByTagName('select')[0][Cnum].innerText
       var fullUrll = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     }
@@ -26,7 +26,7 @@ async function getDate() {
     const response = await fetch(fullUrll)
       .then(response => response.json())
       .then(data => {
-        temp = data.main.temp;
+        temp = Math.round(data.main.temp);
       }).then(updateUI)
   } catch (err) {
     console.log(err);
@@ -36,6 +36,6 @@ async function getDate() {
 const updateUI = async function() {
   document.getElementById('date').innerHTML = date1;
   document.getElementById('temp').innerHTML = `${temp}&deg;`;
-  document.getElementsByClassName('widget')[0].style.display = 'block';
+  document.getElementsByClassName('widget')[0].style.display = 'flex';
   var Zipcode = document.querySelector('#zip').value = '';
 }

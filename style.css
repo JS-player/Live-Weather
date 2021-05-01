@@ -246,7 +246,7 @@ div.city {
 
 div.temp {
   font-size: 80px;
-  text-align: center;
+  padding-left:15px;
 }
 
 .right-panel img {
